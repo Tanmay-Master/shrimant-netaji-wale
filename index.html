@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> पुरंदरचा राजा श्रीमंत नेताजी सुभाष सार्वजनिक गणेशोत्सव मित्र मंडळ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Noto+Serif+Devanagari:wght@500;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --deep-red: #d46b0f;
+            --dark-red: #d46b0f;
+            --light-gold: #FFD700;
+            --dark: #1A120B;
+            --light: #FFF8E1;
+            --gray: #f5f5f5;
+            --dark-gray: #333;
+            --festive-orange: #ff6b00;
+            --festive-yellow: #ffd700;
+            --festive-green: #4CAF50;
+            --festive-blue: #2196F3;
+            --festive-purple: #9C27B0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hind', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,215,0,0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255,107,0,0.1) 0%, transparent 20%);
+        }
+        
+        .devanagari {
+            font-family: 'Noto Serif Devanagari', serif;
+            font-weight: 900;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--deep-red) 0%, var(--dark-red) 100%);
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+        
+        @keyframes rotateLogo {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .temple-name {
+            color: white;
+            font-size: 1.2rem;
+            margin-left: 15px;
+            font-family: 'Playfair Display', serif;
+            line-height: 1.3;
+        }
+        
+        .temple-subtitle {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 5px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gold);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        nav a:hover::after, nav a.active::after {
+            transform: translateX(0);
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--gold);
+        }
+        
+        /* Home Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('NetajiGanpati1.jpeg') no-repeat center center;
+            background-size: cover;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .home-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--light-gold), 0 0 20px var(--light-gold); }
+            to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--light-gold), 0 0 40px var(--light-gold); }
+        }
+        
+        /* Enhanced Countdown Styles */
+        .countdown-container {
+            background: rgba(212, 107, 15, 0.85);
+            padding: 30px;
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 2px solid var(--gold);
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .countdown-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1) 25%, 
+                transparent 50%, 
+                rgba(255, 255, 255, 0.1) 75%, 
+                transparent);
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .countdown-title {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px 20px;
+            border-radius: 15px;
+            min-width: 120px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .countdown-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .countdown-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                rgba(255, 255, 255, 0) 50%, 
+                rgba(255, 255, 255, 0.1) 100%);
+            z-index: 1;
+        }
+        
+        .countdown-number {
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: 700;
+            color: white;
+            line-height: 1;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .countdown-label {
+            font-size: 1.2rem;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .progress-ring {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .progress-ring circle {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.2);
+            stroke-width: 5;
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            transform-origin: center;
+            transform: rotate(-90deg);
+            transition: stroke-dashoffset 0.5s ease;
+        }
+        
+        /* About Section */
+        #about {
+            padding: 100px 0;
+            background-color: var(--gray);
+            position: relative;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+        
+        .about-text h3 {
+            color: var(--deep-red);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            color: var(--deep-red);
+            font-weight: 700;
+        }
+        
+        .gold-text {
+            color: var(--gold);
+            font-weight: 700;
+        }
+        
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border: 5px solid var(--gold);
+            height: 450px;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: var(--deep-red);
+            margin-bottom: 60px;
+            position: relative;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--gold);
+        }
+        
+        /* History Section */
+        #history {
+            padding: 100px 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('history.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+        
+        .history-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .history-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .history-text p {
+            margin-bottom: 25px;
+        }
+        
+        /* Timetable Section */
+        #timetable {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .timetable-container {
+            overflow-x: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        
+        .timetable th {
+            background-color: var(--deep-red);
+            color: white;
+            padding: 18px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .timetable tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .timetable td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            font-size: 1.05rem;
+        }
+        
+        .timetable tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .timetable tr:hover {
+            background-color: #fff8e1;
+        }
+        
+        /* Notice Board */
+        #notice {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--deep-red) 0%, var(--dark-red) 100%);
+            color: white;
+        }
+        
+        .notice-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .notice-board {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            border-left: 10px solid var(--gold);
+            color: var(--dark);
+        }
+        
+        .notice-board:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(90deg, var(--gold), var(--deep-red));
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .notice-title {
+            text-align: center;
+            color: var(--deep-red);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .notice-item {
+            padding: 20px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .notice-item:last-child {
+            border-bottom: none;
+        }
+        
+        .notice-date {
+            color: var(--deep-red);
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .notice-date i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        .notice-text {
+            padding-left: 25px;
+        }
+        
+        /* Gallery Section */
+        #gallery {
+            padding: 100px 0;
+            background-color: var(--gray);
+        }
+        
+        .gallery-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            border: 5px solid var(--gold);
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+        }
+        
+        .slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .gallery-controls {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        
+        .gallery-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(212, 107, 15, 0.7);
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-btn:hover {
+            background: var(--gold);
+            color: var(--deep-red);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, #222 100%);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-section h3:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            color: white;
+            font-size: 1.3rem;
+            min-width: 25px;
+            margin-top: 3px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background-color: var(--gold);
+            transform: translateY(-5px);
+            color: var(--deep-red);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .footer-links a:hover {
+            color: var(--gold);
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+            color: #aaa;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .home-title {
+                font-size: 3rem;
+            }
+            
+            .home-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 2.3rem;
+            }
+            
+            .countdown-number {
+                font-size: 2.8rem;
+            }
+            
+            .countdown-item {
+                min-width: 100px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-bottom: 15px;
+                justify-content: center;
+            }
+            
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            nav li {
+                margin: 5px;
+            }
+            
+            .home-title {
+                font-size: 2.5rem;
+            }
+            
+            .home-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .countdown-title {
+                font-size: 2.2rem;
+            }
+            
+            .countdown-item {
+                min-width: 90px;
+                padding: 20px 15px;
+            }
+            
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-image {
+                height: 350px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .home-title {
+                font-size: 2rem;
+            }
+            
+            .home-subtitle {
+                font-size: 1rem;
+            }
+            
+            .countdown {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                min-width: 80px;
+                padding: 15px 10px;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+            
+            .countdown-label {
+                font-size: 1rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .slide img {
+                height: 300px;
+            }
+        }
+        
+        /* Confetti Canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.7;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            width: 30px;
+            height: 30px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 20%;
+            right: 8%;
+            width: 40px;
+            height: 40px;
+            background: var(--festive-orange);
+            border-radius: 50%;
+            animation-delay: 1s;
+        }
+        
+        .floating-element:nth-child(3) {
+            bottom: 15%;
+            left: 10%;
+            width: 25px;
+            height: 25px;
+            background: var(--festive-green);
+            border-radius: 50%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(4) {
+            bottom: 25%;
+            right: 15%;
+            width: 35px;
+            height: 35px;
+            background: var(--festive-blue);
+            border-radius: 50%;
+            animation-delay: 3s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-20px) rotate(10deg); }
+            50% { transform: translateY(0) rotate(0deg); }
+            75% { transform: translateY(-15px) rotate(-10deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating decorative elements -->
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    <div class="floating-element"></div>
+    
+    <!-- Confetti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <div class="logo">
+                        <img src="Netajiwale Logo.jpg" alt="Temple Logo">
+                    </div>
+                    <div class="temple-name">
+                        <div class="devanagari">पुरंदरचा राजा श्रीमंत नेताजी सुभाष सार्वजनिक गणेशोत्सव मित्र मंडळ</div>
+                        <div class="temple-subtitle">महात्मा फुले चौक, सासवड</div>
+                    </div>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#history">History</a></li>
+                        <li><a href="#timetable">Schedule</a></li>
+                        <li><a href="#notice">Notices</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content">
+        </div>
+    </section>
+    <!-- About Us Section -->
+     <div class="countdown-container">
+                <h2 class="countdown-title">श्री गणेश चतुर्थी २०२५ </h2>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle stroke="var(--gold)" stroke-width="5" r="45" cx="60" cy="60"></circle>
+                        </svg>
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle stroke="var(--festive-orange)" stroke-width="5" r="45" cx="60" cy="60"></circle>
+                        </svg>
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle stroke="var(--festive-green)" stroke-width="5" r="45" cx="60" cy="60"></circle>
+                        </svg>
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle stroke="var(--festive-blue)" stroke-width="5" r="45" cx="60" cy="60"></circle>
+                        </svg>
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+            </div>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">आमच्याबद्दल</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>सासवड येथील <span class="highlight">श्रीमंत नेताजी सुभाष सार्वजनिक गणेशोत्सव मित्र मंडळामध्ये</span>  आपले हार्दिक स्वागत आहे. आमचे मंडळ सन १९४७ पासून समाजसेवेचे कार्य करत आहे.</p>
+                
+                <p>आमच्या मंदिरात <span class="highlight">श्री गणेशाची</span>  प्रतिमा विराजमान आहे जी भक्तांच्या श्रद्धेचे केंद्र आहे.मंदिराच्या उद्देशांमध्ये धार्मिक कार्यक्रमांचे आयोजन, समाजसेवा, शैक्षणिक उपक्रम आणि सांस्कृतिक कार्यक्रम यांचा समावेश आहे.</p>
+                
+                <p>मंदिराच्या कार्यकारी मंडळात स्थानिक व्यक्ती, समाजसेवक आणि गणेश भक्तांचा समावेश आहे. आमचा मुख्य उद्देश समाजात धार्मिक सद्भावना निर्माण करणे, गरिबांना मदत करणे आणि युवकांना सकारात्मक दिशा देणे हा आहे.</p>
+                
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?q=80&w=2070" alt="Temple">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="history">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--gold);">इतिहास</h2>
+            <div class="history-content">
+                <div class="history-text">
+                    <p>महात्मा फुले चौक, सासवड येथे मंदिराची स्थापना. स्वातंत्र्याच्या वर्षी समाजात धार्मिक एकात्मता निर्माण करण्याच्या उद्देशाने सन_१९४७ झाली.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timetable Section -->
+    <section id="timetable">
+        <div class="container">
+            <h2 class="section-title">वेळापत्रक</h2>
+            <div class="timetable-container">
+                <table class="timetable">
+                    <thead>
+                        <tr>
+                            <th>दिनांक</th>
+                            <th>हिंदू तिथी</th>
+                            <th>कार्यक्रम</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>२७ ऑगस्ट २०२५</td>
+                            <td>भाद्रपद शुद्ध ४</td>
+                            <td>मूर्ती आगमन</td>
+                        </tr>
+                        <tr>
+                            <td>२८ ऑगस्ट २०२५</td>
+                            <td>भाद्रपद शुद्ध ५ </td>
+                            <td>--</td>
+                        </tr>
+                        <tr>
+                            <td>२९ ऑगस्ट २०२५</td>
+                            <td>भाद्रपद शुद्ध ६</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>३० ऑगस्ट २०२५</td>
+                            <td>भाद्रपद शुद्ध ७ </td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>३१ ऑगस्ट २०२५</td>
+                            <td>भाद्रपद शुद्ध ८</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>१ सेप्टेंबर २०२५</td>
+                            <td>भाद्रपद शुद्ध ९ </td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>२ सेप्टेंबर २०२५</td>
+                            <td>भाद्रपद शुद्ध १०</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>३  सप्टेंबर २०२५</td>
+                            <td>भाद्रपद शुद्ध ११ </td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>४ सेप्टेंबर २०२५</td>
+                            <td>भाद्रपद शुद्ध १२  </td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>५ सप्टेंबर २०२५</td>
+                            <td>भाद्रपद शुद्ध १३</td>
+                            <td>---</td>
+                        </tr>
+                        <tr>
+                            <td>६ सप्टेंबर २०२५</td>
+                            <td>भाद्रपद शुद्ध १४</td>
+                            <td>अनंत चतुर्थी विसर्जन मिरवणूक </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Board Section -->
+    <section id="notice">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">सूचना</h2>
+            <div class="notice-container">
+                <div class="notice-board">
+                    <div class="notice-title">जाहीर निवेदन</div>
+                    <div class="notice-item">
+                        <div class="notice-date"><i class="fas fa-calendar-alt"></i> 15 August 2023</div>
+                        <div class="notice-text">सर्व भक्तांना कळवण्यात येत आहे की यावर्षीच्या गणेशोत्सवाची सुरुवात २७ ऑगस्ट रोजी होणार आहे.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">छाया चित्रे</h2>
+            <div class="gallery-container">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="IMG_20230919_212733.jpg" alt="Temple">
+                    </div>
+                    <div class="slide">
+                        <img src="IMG_20230919_212736.jpg" alt="Ganesh Idol">
+                    </div>
+                    <div class="slide">
+                        <img src="Nilesh M.jpg" alt="Celebration">
+                    </div>
+                    <div class="slide">
+                        <img src="Aniket.jpg" alt="Devotees">
+                    </div>
+                    <div class="slide">
+                        <img src="Kiran K.jpg" alt="Devotees">
+                    </div>
+                </div>
+                <div class="gallery-controls">
+                    <button class="gallery-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button class="gallery-btn next-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon"><a href="#home"><i class="fas fa-map-marker-alt"></i></a></div>
+                            <div>महात्मा फुले चौक, सासवड, तालुका पुरंदर, जिल्हा पुणे, महाराष्ट्र ४१२३०१ </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div>Open: 6:00 AM - 9:00 PM (Daily)</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#history"><i class="fas fa-chevron-right"></i> Our History</a></li>
+                        <li><a href="#timetable"><i class="fas fa-chevron-right"></i> Event Schedule</a></li>
+                        <li><a href="#notice"><i class="fas fa-chevron-right"></i> Notice Board</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Photo Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <p>Click Below Icons to Stay Connected</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/shreemant_netaji_ganpati?igsh=MXFmb3p2YzNrcG1vag==" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/shorts/kTCQf-o_re4?si=2YYzZVjabZ9EopTg" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="https://maps.app.goo.gl/mpDLNnX5tQ1zBeud8" class="social-link" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; २०२५ श्रीमंत नेताजी सुभाष सार्वजनिक गणेशोत्सव मित्र मंडळ, सासवड. सर्व हक्क राखीव.</p>
+                <p>Design with ❤️ for devotees of Lord Ganesha</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('August 27, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            if (difference < 0) {
+                // Countdown completed
+                document.getElementById('days').textContent = "00";
+                document.getElementById('hours').textContent = "00";
+                document.getElementById('minutes').textContent = "00";
+                document.getElementById('seconds').textContent = "00";
+                
+                // Trigger confetti
+                triggerConfetti();
+                
+                // Clear interval
+                clearInterval(countdownInterval);
+                return;
+            }
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            
+            // Update progress rings
+            updateProgressRing(0, days, 30); // Max 30 days
+            updateProgressRing(1, hours, 24);
+            updateProgressRing(2, minutes, 60);
+            updateProgressRing(3, seconds, 60);
+        }
+        
+        function updateProgressRing(index, value, max) {
+            const circles = document.querySelectorAll('.progress-ring circle');
+            const circle = circles[index];
+            const radius = circle.r.baseVal.value;
+            const circumference = radius * 2 * Math.PI;
+            const progress = value / max;
+            const offset = circumference - progress * circumference;
+            
+            circle.style.strokeDasharray = `${circumference} ${circumference}`;
+            circle.style.strokeDashoffset = offset;
+        }
+        
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Confetti Effect
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            const confettiColors = [
+                '#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5',
+                '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#4CAF50',
+                '#8BC34A', '#CDDC39', '#FFEB3B', '#FFC107', '#FF9800',
+                '#FF5722', '#795548'
+            ];
+            
+            const confetti = [];
+            const confettiCount = 300;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                confetti.push({
+                    x: Math.random() * canvas.width,
+                    y: -Math.random() * canvas.height,
+                    width: Math.random() * 10 + 5,
+                    height: Math.random() * 10 + 5,
+                    speed: Math.random() * 3 + 2,
+                    rotation: Math.random() * 360,
+                    rotationSpeed: Math.random() * 10 - 5,
+                    color: confettiColors[Math.floor(Math.random() * confettiColors.length)]
+                });
+            }
+            
+            function drawConfetti() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                confetti.forEach((c, index) => {
+                    ctx.fillStyle = c.color;
+                    ctx.save();
+                    ctx.translate(c.x + c.width/2, c.y + c.height/2);
+                    ctx.rotate(c.rotation * Math.PI / 180);
+                    ctx.fillRect(-c.width/2, -c.height/2, c.width, c.height);
+                    ctx.restore();
+                    
+                    // Update position
+                    c.y += c.speed;
+                    c.rotation += c.rotationSpeed;
+                    
+                    // Reset if out of screen
+                    if (c.y > canvas.height) {
+                        confetti.splice(index, 1);
+                    }
+                });
+                
+                if (confetti.length > 0) {
+                    requestAnimationFrame(drawConfetti);
+                }
+            }
+            
+            drawConfetti();
+        }
+        
+        // Image Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const slidesContainer = document.querySelector('.slides');
+        
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        });
+        
+        document.querySelector('.prev-btn').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+        
+        function updateSlider() {
+            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        // Auto slide change every 5 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 3000);
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') {
+                    // Prevent default only for home link
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    return;
+                }
+                
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active navigation link
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Header remains same color always
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+            }
+        });
+        
+        // Initialize progress rings
+        window.addEventListener('load', () => {
+            updateProgressRing(0, 0, 30);
+            updateProgressRing(1, 0, 24);
+            updateProgressRing(2, 0, 60);
+            updateProgressRing(3, 0, 60);
+        });
+    </script>
+</body>
+</html>
