@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> पुरंदरचा राजा श्रीमंत नेताजी सुभाष सार्वजनिक गणेशोत्सव मित्र मंडळ</title>
+    <title>Enhanced Schedule - पुरंदरचा राजा श्रीमंत नेताजी सुभाष सार्वजनिक गणेशोत्सव</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Noto+Serif+Devanagari:wght@500;700&family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -144,16 +144,15 @@
         /* Home Section */
         #home {
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('NetajiGanpati1.jpeg') no-repeat center center;
+            background: 
+            linear-gradient(rgba(0, 0, 0, 0.3), 
+            rgba(0, 0, 0, 0.3)),
+            url('NetajiGanpati1.jpeg') no-repeat center center;
             background-size: cover;
+            position: relative;
             overflow: hidden;
-            justify-content: center;
-            align-items: center;
         }
-        
+
         .home-content {
             position: relative;
             z-index: 2;
@@ -163,45 +162,47 @@
             max-width: 1200px;
         }
         
+        .home-title {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            animation: glow 2s infinite alternate;
+        }
         
         @keyframes glow {
             from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--light-gold), 0 0 20px var(--light-gold); }
             to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--light-gold), 0 0 40px var(--light-gold); }
         }
         
-        /* Enhanced Countdown Styles */
-        .countdown-container {
-            background: rgba(212, 107, 15, 0.85);
-            padding: 30px;
-            border-radius: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            border: 2px solid var(--gold);
-            backdrop-filter: blur(5px);
+        .home-subtitle {
+            font-size: 1.8rem;
+            color: var(--gold);
+            margin-bottom: 40px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            font-family: 'Noto Serif Devanagari', serif;
+        }
+        
+        /* Countdown Section */
+        #countdown-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--deep-red) 0%, var(--dark-red) 100%);
             position: relative;
             overflow: hidden;
         }
         
-        .countdown-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, 
-                transparent, 
-                rgba(255, 255, 255, 0.1) 25%, 
-                transparent 50%, 
-                rgba(255, 255, 255, 0.1) 75%, 
-                transparent);
-            animation: shine 3s linear infinite;
-        }
-        
-        @keyframes shine {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .countdown-container {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 50px 30px;
+            border-radius: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 3px solid var(--gold);
+            backdrop-filter: blur(5px);
+            position: relative;
         }
         
         .countdown-title {
@@ -406,10 +407,56 @@
             margin-bottom: 25px;
         }
         
-        /* Timetable Section */
+        /* Timetable Section - Enhanced */
         #timetable {
             padding: 100px 0;
             background-color: var(--light);
+        }
+        
+        .timetable-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+        }
+        
+        .year-navigation {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .nav-arrow {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--deep-red);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid var(--gold);
+        }
+        
+        .nav-arrow:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: scale(1.1);
+        }
+        
+        .current-year {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--deep-red);
+            min-width: 120px;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
         }
         
         .timetable-container {
@@ -444,6 +491,7 @@
             text-align: center;
             border-bottom: 1px solid #eee;
             font-size: 1.05rem;
+            position: relative;
         }
         
         .timetable tr:last-child td {
@@ -452,6 +500,20 @@
         
         .timetable tr:hover {
             background-color: #fff8e1;
+        }
+        
+        .video-link {
+            color: var(--deep-red);
+            font-size: 1.3rem;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .video-link:hover {
+            color: var(--gold);
+            transform: scale(1.2);
         }
         
         /* Notice Board */
@@ -759,6 +821,11 @@
             .about-image {
                 height: 350px;
             }
+            
+            .timetable-header {
+                flex-direction: column;
+                gap: 20px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -793,6 +860,10 @@
             
             .slide img {
                 height: 300px;
+            }
+            
+            .current-year {
+                font-size: 1.8rem;
             }
         }
         
@@ -892,7 +963,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#history">History</a></li>
-                        <li><a href="#timetable">Schedule</a></li>
+                        <li><a href="#timetable" class="active">Schedule</a></li>
                         <li><a href="#notice">Notices</a></li>
                         <li><a href="#gallery">Gallery</a></li>
                     </ul>
@@ -906,9 +977,12 @@
         <div class="home-content">
         </div>
     </section>
-    <!-- About Us Section -->
-     <div class="countdown-container">
-                <h2 class="countdown-title">श्री गणेश चतुर्थी २०२५ </h2>
+    
+    <!-- Countdown Section -->
+    <section id="countdown-section">
+        <div class="container">
+            <div class="countdown-container">
+                <h2 class="countdown-title">आगमनाला दिवस बाकी </h2>
                 <div class="countdown" id="countdown">
                     <div class="countdown-item">
                         <svg class="progress-ring" width="120" height="120">
@@ -940,6 +1014,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
     <section id="about">
         <div class="container">
             <h2 class="section-title">आमच्याबद्दल</h2>
@@ -953,7 +1031,7 @@
                 
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1566378246598-5b11a0d486cc?q=80&w=2070" alt="Temple">
+                    <img src="NetajiGanpati1.jpeg" alt="Temple">
                 </div>
             </div>
         </div>
@@ -971,10 +1049,21 @@
         </div>
     </section>
 
-    <!-- Timetable Section -->
+    <!-- Timetable Section - Enhanced -->
     <section id="timetable">
         <div class="container">
-            <h2 class="section-title">वेळापत्रक</h2>
+            <div class="timetable-header">
+                <p><h2 class="section-title">वेळापत्रक</h2></p>
+                <p><div class="year-navigation">
+                    <div class="nav-arrow prev-year">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="current-year" id="currentYear">2025</div>
+                    <div class="nav-arrow next-year">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div></p>
+            </div>
             <div class="timetable-container">
                 <table class="timetable">
                     <thead>
@@ -984,62 +1073,8 @@
                             <th>कार्यक्रम</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>२७ ऑगस्ट २०२५</td>
-                            <td>भाद्रपद शुद्ध ४</td>
-                            <td>मूर्ती आगमन</td>
-                        </tr>
-                        <tr>
-                            <td>२८ ऑगस्ट २०२५</td>
-                            <td>भाद्रपद शुद्ध ५ </td>
-                            <td>--</td>
-                        </tr>
-                        <tr>
-                            <td>२९ ऑगस्ट २०२५</td>
-                            <td>भाद्रपद शुद्ध ६</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>३० ऑगस्ट २०२५</td>
-                            <td>भाद्रपद शुद्ध ७ </td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>३१ ऑगस्ट २०२५</td>
-                            <td>भाद्रपद शुद्ध ८</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>१ सेप्टेंबर २०२५</td>
-                            <td>भाद्रपद शुद्ध ९ </td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>२ सेप्टेंबर २०२५</td>
-                            <td>भाद्रपद शुद्ध १०</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>३  सप्टेंबर २०२५</td>
-                            <td>भाद्रपद शुद्ध ११ </td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>४ सेप्टेंबर २०२५</td>
-                            <td>भाद्रपद शुद्ध १२  </td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>५ सप्टेंबर २०२५</td>
-                            <td>भाद्रपद शुद्ध १३</td>
-                            <td>---</td>
-                        </tr>
-                        <tr>
-                            <td>६ सप्टेंबर २०२५</td>
-                            <td>भाद्रपद शुद्ध १४</td>
-                            <td>अनंत चतुर्थी विसर्जन मिरवणूक </td>
-                        </tr>
+                    <tbody id="scheduleBody">
+                        <!-- Schedule will be populated by JavaScript -->
                     </tbody>
                 </table>
             </div>
@@ -1069,19 +1104,16 @@
             <div class="gallery-container">
                 <div class="slides">
                     <div class="slide">
-                        <img src="IMG_20230919_212733.jpg" alt="Temple">
-                    </div>
-                    <div class="slide">
-                        <img src="IMG_20230919_212736.jpg" alt="Ganesh Idol">
-                    </div>
-                    <div class="slide">
-                        <img src="Nilesh M.jpg" alt="Celebration">
-                    </div>
-                    <div class="slide">
                         <img src="Aniket.jpg" alt="Devotees">
                     </div>
                     <div class="slide">
+                        <img src="IMG_20230919_212733.jpg" alt="Devotees">
+                    </div>
+                    <div class="slide">
                         <img src="Kiran K.jpg" alt="Devotees">
+                    </div>
+                    <div class="slide">
+                        <img src="Nilesh M.jpg" alt="Devotees">
                     </div>
                 </div>
                 <div class="gallery-controls">
@@ -1326,6 +1358,88 @@
             updateProgressRing(2, 0, 60);
             updateProgressRing(3, 0, 60);
         });
+        
+        // Enhanced Schedule Section
+        // Event data by year
+        const eventsByYear = {
+            2023: [
+                { date: "१९  सप्टेंबर २०२३", tithi: "भाद्रपद शुद्ध ५", event: "मूर्ती आगमन", videoLink: "" },
+                { date: "२८  सप्टेंबर २०२३", tithi: "भाद्रपद शुद्ध १४", event: "विसर्जन मिरवणूक", videoLink: "" }
+            ],
+            2024: [
+                { date: "७ सप्टेंबर २०२४", tithi: "भाद्रपद शुद्ध ५", event: "मूर्ती आगमन", videoLink: "https://www.instagram.com/reel/C_oEKF8oH2j/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+                { date: "१७ सप्टेंबर २०२४", tithi: "भाद्रपद शुद्ध १४", event: "विसर्जन मिरवणूक", videoLink: "https://www.instagram.com/reel/DAFmMRQo3Zr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" }
+            ],
+            2025: [
+                { date: "13 ऑगस्ट २०२५", tithi: "श्रावण कृष्ण ४/५", event: "वासापूजन ", videoLink: "https://www.instagram.com/reel/DNQqy5_I1AL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+                { date: "२७ ऑगस्ट २०२५", tithi: "भाद्रपद शुद्ध ४", event: "मूर्ती आगमन", videoLink: "" },
+                { date: "२८ ऑगस्ट २०२५", tithi: "भाद्रपद शुद्ध ५", event: "--", videoLink: "" },
+                { date: "२९ ऑगस्ट २०२५", tithi: "भाद्रपद शुद्ध ६", event: "--", videoLink: "" },
+                { date: "३० ऑगस्ट २०२५", tithi: "भाद्रपद शुद्ध ७", event: "--", videoLink: "" },
+                { date: "३१ ऑगस्ट २०२५", tithi: "भाद्रपद शुद्ध ८", event: "--", videoLink: "" },
+                { date: "१ सप्टेंबर २०२५", tithi: "भाद्रपद शुद्ध ९", event: "--", videoLink: "" },
+                { date: "२ सप्टेंबर २०२५", tithi: "भाद्रपद शुद्ध १०", event: "--", videoLink: "" },
+                { date: "३ सप्टेंबर २०२५", tithi: "भाद्रपद शुद्ध ११", event: "--", videoLink: "" },
+                { date: "४ सप्टेंबर २०२५", tithi: "भाद्रपद शुद्ध १२", event: "--", videoLink: "" },
+                { date: "५ सप्टेंबर २०२५", tithi: "भाद्रपद शुद्ध १३", event: "--", videoLink: "" },
+                { date: "६ सप्टेंबर २०२५", tithi: "भाद्रपद शुद्ध १४", event: "अनंत चतुर्थी विसर्जन मिरवणूक", videoLink: "" }
+            ],
+        };
+
+        // Initialize with current year
+        let currentYear = 2025;
+        
+        // Render timetable for a specific year
+        function renderTimetable(year) {
+            const scheduleBody = document.getElementById('scheduleBody');
+            const yearEvents = eventsByYear[year] || [];
+            
+            // Clear existing content
+            scheduleBody.innerHTML = '';
+            
+            // Update current year display
+            document.getElementById('currentYear').textContent = year;
+            
+            // Render events
+            yearEvents.forEach(event => {
+                const row = document.createElement('tr');
+                
+                row.innerHTML = `
+                    <td>${event.date}</td>
+                    <td>${event.tithi}</td>
+                    <td>
+                        ${event.event}
+                        ${event.videoLink ? `<i class="fas fa-video video-link" data-link="${event.videoLink}"></i>` : ''}
+                    </td>
+                `;
+                
+                scheduleBody.appendChild(row);
+            });
+            
+            // Add event listeners to video icons
+            document.querySelectorAll('.video-link').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    const videoLink = this.getAttribute('data-link');
+                    if (videoLink) {
+                        window.open(videoLink, '_blank');
+                    }
+                });
+            });
+        }
+        
+        // Year navigation event handlers
+        document.querySelector('.prev-year').addEventListener('click', () => {
+            currentYear--;
+            renderTimetable(currentYear);
+        });
+        
+        document.querySelector('.next-year').addEventListener('click', () => {
+            currentYear++;
+            renderTimetable(currentYear);
+        });
+        
+        // Initialize the timetable
+        renderTimetable(currentYear);
     </script>
 </body>
 </html>
